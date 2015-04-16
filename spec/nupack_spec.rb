@@ -1,5 +1,5 @@
 require "rspec"
-require_relative "../nulogy"
+require_relative "../nupack"
 
 RSpec.describe Job, "#totalRounded" do
 
