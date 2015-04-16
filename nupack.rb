@@ -8,10 +8,10 @@ class Job
 
 	attr_accessor :base, :numberPeople, :type
 
-	def initialize(base,numberPeople,type)
+	def initialize(base,numberPeople=1,type="ZeroMarkup")
 		@base = base
 		@numberPeople = numberPeople
-		@type = type
+		@type = type.downcase
 	end
 
 	def totalRounded
@@ -27,5 +27,4 @@ class Job
 		numPercent = @numberPeople * 1.2
 		((@@markup[@type] ? @@markup[@type] : 0 ) + numPercent) / 100 + 1
 	end
-
 end
